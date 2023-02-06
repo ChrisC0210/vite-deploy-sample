@@ -14,9 +14,9 @@ export default {
     };
   },
   mounted() {
-    //console.log(import.meta.env.VITE_PATH);
+    console.log(import.meta.env.VITE_PATH);
     console.log(import.meta.env.VITE_TEXT);
-    const url = VITE_PATH;
+    const url = import.meta.env.VITE_PATH;
     this.$http.get(url).then((res) =>{
       console.log(res);
       this.data = res.data.results[0];

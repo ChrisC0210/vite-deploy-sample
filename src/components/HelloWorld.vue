@@ -1,12 +1,26 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   msg: {
     type: String,
     required: true,
   },
 });
+</script> -->
+<script>
+export default {
+  props: {
+    msg: {
+    type: String,
+    required: true,
+  },
+  },
+  data() {
+    return {
+      count:0,
+    }
+  }
+}
 </script>
-
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
